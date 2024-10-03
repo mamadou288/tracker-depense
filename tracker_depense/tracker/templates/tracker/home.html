@@ -1,0 +1,27 @@
+{% extends 'tracker/base.html' %}
+
+{% block title %}Accueil - Gestionnaire de Dépenses{% endblock %}
+
+{% block content %}
+<section id="hero">
+    <h1>Bienvenue sur votre gestionnaire de dépenses</h1>
+    <p>Gérez vos dépenses efficacement avec notre outil simple et puissant.</p>
+    <a href="{% url 'register' %}" class="cta-button">Commencer maintenant</a>
+</section>
+
+<section id="features">
+    <h2>Caractéristiques</h2>
+    <div class="feature">
+        <h3>Ajouter des Dépenses</h3>
+        <p>Enregistrez facilement toutes vos dépenses avec des catégories personnalisées.</p>
+    </div>
+    <div class="feature">
+        <h3>Voir les Rapports</h3>
+        <p>Visualisez vos dépenses à travers des rapports détaillés et des graphiques.</p>
+    </div>
+    <div class="feature">
+        <h3>Sécurité</h3>
+        <p>Toutes vos données sont sécurisées et accessibles uniquement à vous.</p>
+    </div>
+</section>
+{% endblock %}

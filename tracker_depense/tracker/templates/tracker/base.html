@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Gestionnaire de Dépenses{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'tracker/css/style.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Accueil</a></li>
+                <li><a href="{% url 'login' %}">Se connecter</a></li>
+                <li><a href="{% url 'register' %}">S'inscrire</a></li>
+                <li><a href="{% url 'lister_depenses' %}">Voir les Dépenses</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Gestionnaire de Dépenses. Tous droits réservés.</p>
+    </footer>
+</body>
+</html
